@@ -67,13 +67,13 @@ function ProspectFormInner() {
           className="text-3xl md:text-4xl font-bold mb-4 text-primary text-glow-neon uppercase tracking-wider"
           style={{ fontFamily: 'var(--font-bebas)' }}
         >
-          RECIBIMOS TU INFO
+          GRACIAS POR TU TIEMPO!
         </h3>
         <p className="text-lg text-muted-foreground mb-2">
-          Muy pronto te contactaremos por WhatsApp.
+          En breve nos comunicamos con vos!
         </p>
         <p className="text-2xl font-bold text-foreground">
-          Preparate para tu transformación.
+          Estás a un paso de tu mejor decisión
         </p>
       </div>
     )

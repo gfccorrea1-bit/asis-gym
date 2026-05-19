@@ -12,7 +12,6 @@ type Prospecto = {
   como_nos_conociste: string
   fecha_registro: string
   contactado: boolean
-  vendedor: string
 }
 
 const origenLabel: Record<string, string> = {
@@ -201,7 +200,7 @@ export default function AdminPage() {
               <div style={{ fontFamily: "Bebas Neue, sans-serif", fontSize: 24, color: "#4ADE80" }}>{prospectos.filter(p => p.contactado).length}</div>
               <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: 1 }}>CONTACTADOS</div>
             </div>
-<button onClick={cargarProspectos} style={{ background: "rgba(123,0,255,0.2)", border: "1px solid rgba(123,0,255,0.4)", color: "#7B00FF", borderRadius: 8, padding: "8px 14px", cursor: "pointer", fontSize: 12, fontWeight: 700 }}>
+            <button onClick={cargarProspectos} style={{ background: "rgba(123,0,255,0.2)", border: "1px solid rgba(123,0,255,0.4)", color: "#7B00FF", borderRadius: 8, padding: "8px 14px", cursor: "pointer", fontSize: 12, fontWeight: 700 }}>
               ↻ Actualizar
             </button>
           </div>
@@ -254,10 +253,6 @@ export default function AdminPage() {
                   <div style={{ color: "white", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{p.nombre_apellido}</div>
                   <div style={{ color: "#C8FF00", fontSize: 13, marginBottom: 4 }}>📞 {p.telefono}</div>
                   <div style={{ color: "rgba(255,255,255,0.4)", fontSize: 12 }}>{origenLabel[p.como_nos_conociste] || p.como_nos_conociste}</div>
-                  <div style={{ marginTop: 6, display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(123,0,255,0.15)", border: "1px solid rgba(123,0,255,0.3)", borderRadius: 20, padding: "2px 10px" }}>
-                    <span style={{ color: "#C8FF00", fontSize: 10, fontWeight: 700, letterSpacing: 1 }}>VENDEDOR</span>
-                    <span style={{ color: "white", fontSize: 12, fontWeight: 700 }}>{p.vendedor || "directo"}</span>
-                  </div>
                 </div>
 
                 <div style={{ color: "rgba(255,255,255,0.3)", fontSize: 11, minWidth: 120, textAlign: "center" }}>

@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -20,6 +21,9 @@ export function ProspectForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const searchParams = useSearchParams()
+  const vendedor = searchParams.get("ref") || "directo"
+
   const [formData, setFormData] = useState({
     nombre_apellido: "",
     telefono: "",
@@ -41,7 +45,7 @@ export function ProspectForm() {
       const supabase = createClient()
       const { error: insertError } = await supabase
         .from("prospectos")
-        .insert([formData])
+        .insert([{ ...formData, vendedor }])
 
       if (insertError) throw insertError
       setIsSuccess(true)
@@ -69,7 +73,7 @@ export function ProspectForm() {
           Muy pronto te contactaremos por WhatsApp.
         </p>
         <p className="text-2xl font-bold text-foreground">
-          Animate a sacar lo mejor de vos!
+          Preparate para tu transformación.
         </p>
       </div>
     )
@@ -117,7 +121,7 @@ export function ProspectForm() {
         <Input
           id="telefono"
           type="tel"
-          placeholder="Ej: 3514098811"
+          placeholder="Ej: 11 1234-5678"
           value={formData.telefono}
           onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
           required

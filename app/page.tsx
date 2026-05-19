@@ -99,16 +99,16 @@ export default function HomePage() {
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10">
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>+6000 PERSONAS</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">NOS ELIGIERON</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>+6000</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">PERSONAS NOS ELIGIERON</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-[#8B5CF6]" style={{ fontFamily: 'var(--font-bebas)' }}>14 AÑOS</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider">HACIENDO LO QUE AMAMOS</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>250 M2</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Y +40 MÁQUINAS</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>100%</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">BUENA ENERGÍA</div>
                 </div>
               </div>
             </div>
@@ -147,25 +147,6 @@ export default function HomePage() {
       </section>
 
       <ImageGallery />
-      <StatsSection />
-
-      {/* CTA Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#8B5CF6]/10 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#CCFF00]/10 rounded-full blur-[200px]" />
-        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
-          <h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase mb-6 text-foreground"
-            style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.03em' }}
-          >
-            ¿QUÉ ESTÁS <span className="text-[#CCFF00]" style={{ textShadow: '0 0 30px rgba(200,255,0,0.4)' }}>ESPERANDO?</span>
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
-            Dejá tus datos arriba y uno de nuestros asesores te escribe por WhatsApp. <span className="text-white font-semibold">Hoy mismo.</span>
-          </p>
-          <ScrollToTopButton />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="relative py-10 border-t border-[#8B5CF6]/20">

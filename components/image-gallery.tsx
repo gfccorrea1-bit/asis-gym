@@ -6,16 +6,16 @@ import { useState } from "react"
 const cards = [
   {
     src: "/images/gallery-movete.jpg",
-    alt: "Hombre y mujer entrenando juntos en el gym",
+    alt: "Interior del gym con gente entrenando",
     title: "MOVETE Y DESCARGÁ",
-    desc: "Sentirse bien es tu elección",
+    desc: "Sentirse bien es tu elección.",
     accent: "#C8FF00",
   },
   {
     src: "/images/gallery-seguimos.jpg",
     alt: "Entrenadora guiando a una alumna con pesas",
     title: "TE SEGUIMOS EN TODO MOMENTO",
-    desc: "Nuestros profes te acompañan de verdad",
+    desc: "Nuestros profes te acompañan de verdad.",
     accent: "#7B00FF",
   },
   {
@@ -24,6 +24,13 @@ const cards = [
     title: "VIBRÁ CON GENTE DE BUENA ENERGÍA",
     desc: "El ambiente que te hace volver.",
     accent: "#C8FF00",
+  },
+  {
+    src: "/images/gallery-sala.jpg",
+    alt: "Sala completa del gym con equipamiento",
+    title: "SALA FULL EQUIPADA",
+    desc: "Todo lo que necesitás para entrenar como querés.",
+    accent: "#7B00FF",
   },
 ]
 
@@ -50,29 +57,26 @@ export function ImageGallery() {
           </p>
         </div>
 
-        {/* Cards — 3 columnas en desktop, 1 en mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/* Cards — 2x2 en desktop, 1 columna en mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {cards.map((card, i) => (
             <div
               key={i}
               className="relative overflow-hidden rounded-2xl cursor-pointer group"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "4/3" }}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >
-              {/* Foto */}
               <Image
                 src={card.src}
                 alt={card.alt}
                 fill
                 className={`object-cover transition-transform duration-700 ${hovered === i ? "scale-110" : "scale-100"}`}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
 
-              {/* Overlay base siempre visible */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-              {/* Overlay de color al hover */}
               <div
                 className="absolute inset-0 transition-opacity duration-500"
                 style={{
@@ -81,7 +85,6 @@ export function ImageGallery() {
                 }}
               />
 
-              {/* Borde luminoso al hover */}
               <div
                 className="absolute inset-0 rounded-2xl border-2 transition-all duration-500"
                 style={{
@@ -90,9 +93,7 @@ export function ImageGallery() {
                 }}
               />
 
-              {/* Contenido inferior */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                {/* Línea acento */}
                 <div
                   className="h-0.5 rounded-full mb-4 transition-all duration-500"
                   style={{
@@ -100,7 +101,6 @@ export function ImageGallery() {
                     width: hovered === i ? "60px" : "30px",
                   }}
                 />
-
                 <h3
                   className="text-white uppercase font-bold leading-tight mb-2"
                   style={{
@@ -111,7 +111,6 @@ export function ImageGallery() {
                 >
                   {card.title}
                 </h3>
-
                 <p
                   className="text-sm text-white/60 transition-all duration-500"
                   style={{

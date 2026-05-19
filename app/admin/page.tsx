@@ -173,6 +173,34 @@ export default function AdminPage() {
   }
 
   // PANEL
+
+  const exportarCSV = () => {
+    const origenTexto: Record<string, string> = {
+      por_un_conocido: "Por un conocido",
+      vivo_cerca: "Vive cerca",
+      redes_sociales: "Redes sociales",
+      google_maps: "Google Maps",
+      ex_cliente: "Ya fue cliente",
+      por_conocido: "Por un conocido",
+    }
+    const headers = ["NOMBRE", "REGISTRADO", "TELÉFONO", "PROPIETARIO", "ORIGEN"]
+    const rows = prospectos.map(p => [
+      p.nombre_apellido,
+      new Date(p.fecha_registro).toLocaleString("es-AR"),
+      p.telefono,
+      p.vendedor || "directo",
+      origenTexto[p.como_nos_conociste] || p.como_nos_conociste,
+    ])
+    const csv = [headers, ...rows].map(r => r.map(v => `"${v}"`).join(",")).join("\n")
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement("a")
+    a.href = url
+    a.download = `prospectos-asis-${new Date().toISOString().slice(0,10)}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
   return (
     <div style={{ minHeight: "100vh", background: "#0D0D0D", fontFamily: "DM Sans, sans-serif", padding: "24px 16px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -202,6 +230,9 @@ export default function AdminPage() {
             </div>
 <button onClick={cargarProspectos} style={{ background: "rgba(123,0,255,0.2)", border: "1px solid rgba(123,0,255,0.4)", color: "#7B00FF", borderRadius: 8, padding: "8px 14px", cursor: "pointer", fontSize: 12, fontWeight: 700 }}>
               ↻ Actualizar
+            </button>
+            <button onClick={exportarCSV} style={{ background: "rgba(200,255,0,0.15)", border: "1px solid rgba(200,255,0,0.4)", color: "#C8FF00", borderRadius: 8, padding: "8px 14px", cursor: "pointer", fontSize: 12, fontWeight: 700 }}>
+              ↓ Exportar CSV
             </button>
           </div>
         </div>

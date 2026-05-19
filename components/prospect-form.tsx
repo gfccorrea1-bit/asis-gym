@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
@@ -17,13 +17,13 @@ const referralOptions = [
   { value: "ex_cliente", label: "Ya fui cliente antes" },
 ]
 
-export function ProspectForm() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+function ProspectFormInner() {
   const searchParams = useSearchParams()
   const vendedor = searchParams.get("ref") || "directo"
 
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     nombre_apellido: "",
     telefono: "",
@@ -185,5 +185,23 @@ export function ProspectForm() {
         Te contactaremos por WhatsApp para coordinar tu visita
       </p>
     </form>
+  )
+}
+
+export function ProspectForm() {
+  return (
+    <Suspense fallback={
+      <div className="glass rounded-2xl p-6 md:p-10">
+        <div className="animate-pulse space-y-4">
+          <div className="h-8 bg-white/10 rounded w-1/2 mx-auto" />
+          <div className="h-14 bg-white/10 rounded-xl" />
+          <div className="h-14 bg-white/10 rounded-xl" />
+          <div className="h-40 bg-white/10 rounded-xl" />
+          <div className="h-16 bg-white/10 rounded-xl" />
+        </div>
+      </div>
+    }>
+      <ProspectFormInner />
+    </Suspense>
   )
 }

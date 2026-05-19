@@ -30,13 +30,8 @@ export default function HomePage() {
       >
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <AsisLogo className="w-10 h-10" />
-            <span
-              className="text-xl font-bold text-[#8B5CF6] uppercase tracking-widest hidden sm:block"
-              style={{ fontFamily: 'var(--font-bebas)' }}
-            >
-              ASIS GYM
-            </span>
+            <AsisLogo className="w-32 h-14" />
+
           </div>
           <div className="flex items-center gap-4">
             <a
@@ -149,7 +144,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-[#8B5CF6]/50" />
-            <AsisLogo className="w-8 h-8" />
+            <AsisLogo className="w-28 h-12" />
             <div className="h-px w-12 bg-[#8B5CF6]/50" />
           </div>
         </div>
@@ -181,10 +176,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <AsisLogo className="w-8 h-8" />
-              <span className="text-xl font-bold text-[#8B5CF6] uppercase tracking-widest" style={{ fontFamily: 'var(--font-bebas)' }}>
-                ASIS GYM
-              </span>
+              <AsisLogo className="w-28 h-12" />
+
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="https://www.instagram.com/asisgym" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#8B5CF6] transition-colors">

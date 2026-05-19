@@ -8,14 +8,14 @@ const cards = [
     src: "/images/gallery-movete.jpg",
     alt: "Hombre y mujer entrenando juntos en el gym",
     title: "MOVETE Y DESCARGÁ",
-    desc: "Para todas las edades, todos los niveles.",
+    desc: "Sentirse bien es tu elección",
     accent: "#C8FF00",
   },
   {
     src: "/images/gallery-seguimos.jpg",
     alt: "Entrenadora guiando a una alumna con pesas",
     title: "TE SEGUIMOS EN TODO MOMENTO",
-    desc: "Nuestros profes están con vos en cada rep.",
+    desc: "Nuestros profes te acompañan de verdad",
     accent: "#7B00FF",
   },
   {
@@ -42,11 +42,11 @@ export function ImageGallery() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase mb-4"
             style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
           >
-            <span className="text-white">EL LUGAR</span>{" "}
-            <span className="text-[#7B00FF]">ES ESTE</span>
+            <span className="text-white">MUCHO MÁS</span>{" "}
+            <span className="text-[#7B00FF]">QUE UN GIMNASIO</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Más de 14 años siendo el espacio donde la gente de Córdoba entrena de verdad.
+            Tu cable a tierra. Tu momento del día. Tu refugio y tu manada.
           </p>
         </div>
 

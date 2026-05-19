@@ -78,7 +78,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 mb-8">
                 <span className="w-2 h-2 rounded-full bg-[#CCFF00] animate-pulse" />
                 <span className="text-sm font-semibold text-[#CCFF00] uppercase tracking-wider">
-                  ✦ DESAFIÁ TUS EXCUSAS
+                  DESCUBRÍ TU ENERGÍA
                 </span>
               </div>
 
@@ -86,29 +86,29 @@ export default function HomePage() {
                 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] mb-6 uppercase"
                 style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
               >
-                <span className="text-foreground">EL MOMENTO</span>
+                <span className="text-foreground">SENTIRTE</span>
                 <br />
-                <span className="text-[#CCFF00]" style={{ textShadow: '0 0 30px rgba(200,255,0,0.4)' }}>ES AHORA.</span>
+                <span className="text-[#CCFF00]" style={{ textShadow: '0 0 30px rgba(200,255,0,0.4)' }}>MEJOR QUE NUNCA</span>
                 <br />
-                <span className="text-[#8B5CF6]">¿QUÉ ESPERÁS?</span>
+                <span className="text-[#8B5CF6]">DEPENDE DE VOS</span>
               </h1>
 
               <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto lg:mx-0 mb-8 leading-relaxed">
-                Dejá tus datos y te llamamos. <span className="text-white font-semibold">Sin vueltas.</span>
+                Dejanos tus datos y te contactamos por WhatsApp. <span className="text-white font-semibold">Sin vueltas.</span>
               </p>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10">
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>17.7K</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Seguidores</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>+6000 PERSONAS</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">NOS ELIGIERON</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[#8B5CF6]" style={{ fontFamily: 'var(--font-bebas)' }}>14 años</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">en Córdoba</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#8B5CF6]" style={{ fontFamily: 'var(--font-bebas)' }}>14 AÑOS</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">HACIENDO LO QUE AMAMOS</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>+6000</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">nos eligieron</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#CCFF00]" style={{ fontFamily: 'var(--font-bebas)' }}>250 M2</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Y +40 MÁQUINAS</div>
                 </div>
               </div>
             </div>
@@ -134,9 +134,9 @@ export default function HomePage() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight text-foreground"
             style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.03em' }}
           >
-            <span className="text-[#8B5CF6]">{'"'}ACÁ NO HAY</span>
+            <span className="text-[#8B5CF6]">{'"'}SOMOS FAMILIA</span>
             <br />
-            <span className="text-[#CCFF00]" style={{ textShadow: '0 0 30px rgba(200,255,0,0.4)' }}>EXCUSAS{'"'}</span>
+            <span className="text-[#CCFF00]" style={{ textShadow: '0 0 30px rgba(200,255,0,0.4)' }}>SOMOS ENERGÍA{'"'}</span>
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-[#8B5CF6]/50" />

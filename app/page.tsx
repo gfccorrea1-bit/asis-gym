@@ -29,7 +29,7 @@ export default function HomePage() {
       >
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <AsisLogo className="w-32 h-14" />
+            <AsisLogo className="w-20 h-9 sm:w-28 sm:h-12" />
           </div>
           <div className="flex items-center gap-4">
             <a href="https://www.instagram.com/asisgym" target="_blank" rel="noopener noreferrer"
@@ -117,7 +117,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-[#8B5CF6]/50" />
-            <AsisLogo className="w-28 h-12" />
+            <AsisLogo className="w-16 h-7 sm:w-24 sm:h-10" />
             <div className="h-px w-12 bg-[#8B5CF6]/50" />
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function HomePage() {
           src="/images/quote-bg.jpg"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "right 20%" }}
+          style={{ objectPosition: "center 30%" }}
         />
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10">
@@ -141,7 +141,7 @@ export default function HomePage() {
       <footer className="relative py-10 border-t border-[#8B5CF6]/20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <AsisLogo className="w-28 h-12" />
+            <AsisLogo className="w-16 h-7 sm:w-24 sm:h-10" />
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="https://www.instagram.com/asisgym" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-[#8B5CF6] transition-colors">

@@ -117,7 +117,7 @@ export function ProspectForm() {
         <Input
           id="telefono"
           type="tel"
-          placeholder="Ej: 11 1234-5678"
+          placeholder="Ej: 3514098811"
           value={formData.telefono}
           onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
           required

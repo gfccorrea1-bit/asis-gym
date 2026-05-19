@@ -4,8 +4,8 @@ export function AsisLogo({ className = "" }: { className?: string }) {
   return (
     <div className={`relative ${className}`}>
       <Image
-        src="/images/logo-asis.jpg"
-        alt="ÁSIS Fitbox"
+        src="/images/logo-asis.png"
+        alt="ÁSIS"
         fill
         className="object-contain"
         priority

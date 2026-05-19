@@ -75,7 +75,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 mb-8 animate-float">
                 <span className="w-2 h-2 rounded-full bg-[#CCFF00] animate-pulse" />
                 <span className="text-sm font-semibold text-[#8B5CF6] uppercase tracking-wider">
-                  Tu transformación empieza acá
+                  LLENATE DE ENERGÍA!
                 </span>
               </div>
 
@@ -96,7 +96,7 @@ export default function HomePage() {
               {/* Subtitle */}
               <p className="text-base md:text-lg text-muted-foreground max-w-md mx-auto lg:mx-0 mb-8 leading-relaxed">
                 Sumate a la familia <span className="text-[#8B5CF6] font-semibold">ASIS GYM</span>. 
-                Dejá tus datos y te contactamos por WhatsApp para comenzar tu transformación.
+                Dejanos tus datos y te contactamos por WhatsApp a la brevedad. Sentirte bien depende de vos!.
               </p>
 
               {/* Stats Preview */}
@@ -106,18 +106,18 @@ export default function HomePage() {
                     className="text-4xl md:text-5xl font-bold text-[#CCFF00]" 
                     style={{ fontFamily: 'var(--font-bebas)' }}
                   >
-                    17.7K
+                    TE ACOMPAÑAMOS
                   </div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Seguidores</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">DE VERDAD</div>
                 </div>
                 <div className="text-center">
                   <div 
                     className="text-4xl md:text-5xl font-bold text-[#8B5CF6]" 
                     style={{ fontFamily: 'var(--font-bebas)' }}
                   >
-                    +315
+                    +40
                   </div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Posts</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">MÁQUINAS</div>
                 </div>
                 <div className="text-center">
                   <div 

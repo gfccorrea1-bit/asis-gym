@@ -69,7 +69,7 @@ export function ProspectForm() {
           Muy pronto te contactaremos por WhatsApp.
         </p>
         <p className="text-2xl font-bold text-foreground">
-          Preparate para tu transformación.
+          Animate a sacar lo mejor de vos!
         </p>
       </div>
     )

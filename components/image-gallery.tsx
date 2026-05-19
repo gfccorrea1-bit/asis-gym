@@ -5,21 +5,21 @@ import { useState } from "react"
 
 const cards = [
   {
-    src: "https://images.pexels.com/photos/18812272/pexels-photo-18812272.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/images/gallery-movete.jpg",
     alt: "Hombre y mujer entrenando juntos en el gym",
     title: "MOVETE Y DESCARGÁ",
     desc: "Para todas las edades, todos los niveles.",
     accent: "#C8FF00",
   },
   {
-    src: "https://images.pexels.com/photos/4853325/pexels-photo-4853325.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/images/gallery-seguimos.jpg",
     alt: "Entrenadora guiando a una alumna con pesas",
     title: "TE SEGUIMOS EN TODO MOMENTO",
     desc: "Nuestros profes están con vos en cada rep.",
     accent: "#7B00FF",
   },
   {
-    src: "https://images.pexels.com/photos/6285246/pexels-photo-6285246.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/images/gallery-energia.jpg",
     alt: "Personas sonriendo y disfrutando en el gym",
     title: "VIBRÁ CON GENTE DE BUENA ENERGÍA",
     desc: "El ambiente que te hace volver.",

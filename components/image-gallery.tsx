@@ -1,123 +1,128 @@
 "use client"
 
-import { useState, useRef } from "react"
+import Image from "next/image"
+import { useState } from "react"
 
-const videos = [
+const cards = [
   {
-    id: "4944394",
+    src: "https://images.pexels.com/photos/18812272/pexels-photo-18812272.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Hombre y mujer entrenando juntos en el gym",
     title: "MOVETE Y DESCARGÁ",
-    poster: "https://images.pexels.com/videos/4944394/pictures/preview-0.jpg",
+    desc: "Para todas las edades, todos los niveles.",
+    accent: "#C8FF00",
   },
   {
-    id: "4367572",
+    src: "https://images.pexels.com/photos/4853325/pexels-photo-4853325.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Entrenadora guiando a una alumna con pesas",
     title: "TE SEGUIMOS EN TODO MOMENTO",
-    poster: "https://images.pexels.com/videos/4367572/pictures/preview-0.jpg",
+    desc: "Nuestros profes están con vos en cada rep.",
+    accent: "#7B00FF",
   },
   {
-    id: "3694919",
+    src: "https://images.pexels.com/photos/6285246/pexels-photo-6285246.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Personas sonriendo y disfrutando en el gym",
     title: "VIBRÁ CON GENTE DE BUENA ENERGÍA",
-    poster: "https://images.pexels.com/videos/3694919/pictures/preview-0.jpg",
-  },
-  {
-    id: "18941351",
-    title: "SUPERÁ TUS LÍMITES",
-    poster: "https://images.pexels.com/videos/18941351/pictures/preview-0.jpg",
+    desc: "El ambiente que te hace volver.",
+    accent: "#C8FF00",
   },
 ]
 
-function VideoCard({ video, large }: { video: typeof videos[0]; large?: boolean }) {
-  const [hovered, setHovered] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  const handleMouseEnter = () => {
-    setHovered(true)
-    videoRef.current?.play()
-  }
-
-  const handleMouseLeave = () => {
-    setHovered(false)
-    if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
-    }
-  }
-
-  return (
-    <div
-      className={`relative group overflow-hidden rounded-2xl cursor-pointer ${large ? "aspect-[4/5] md:aspect-auto md:row-span-2" : "aspect-[16/10]"}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Video */}
-      <video
-        ref={videoRef}
-        muted
-        loop
-        playsInline
-        poster={video.poster}
-        className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${hovered ? "scale-110" : "scale-100"}`}
-      >
-        <source
-          src={`https://videos.pexels.com/video-files/${video.id}/${video.id}-hd_1920_1080_25fps.mp4`}
-          type="video/mp4"
-        />
-        <source
-          src={`https://videos.pexels.com/video-files/${video.id}/${video.id}-hd_1280_720_25fps.mp4`}
-          type="video/mp4"
-        />
-      </video>
-
-      {/* Overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent transition-opacity duration-500 ${hovered ? "opacity-80" : "opacity-60"}`} />
-
-      {/* Border glow on hover */}
-      <div className={`absolute inset-0 border-2 rounded-2xl transition-all duration-500 ${hovered ? "border-[#7B00FF] shadow-[inset_0_0_30px_rgba(123,0,255,0.2)]" : "border-transparent"}`} />
-
-      {/* Play indicator */}
-      <div className={`absolute top-4 right-4 transition-all duration-300 ${hovered ? "opacity-0" : "opacity-60"}`}>
-        <div className="w-8 h-8 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
-          <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 ml-0.5">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-        </div>
-      </div>
-
-      {/* Title */}
-      <div className={`absolute bottom-0 left-0 right-0 p-6 md:p-8 transition-all duration-500 ${hovered ? "translate-y-0 opacity-100" : "translate-y-2 opacity-85"}`}>
-        <h3
-          className="text-xl md:text-3xl font-bold text-white uppercase"
-          style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.05em' }}
-        >
-          {video.title}
-        </h3>
-        <div className={`h-1 rounded-full mt-3 transition-all duration-500 ${hovered ? "w-24 bg-[#C8FF00]" : "w-12 bg-[#7B00FF]"}`} />
-      </div>
-    </div>
-  )
-}
-
 export function ImageGallery() {
+  const [hovered, setHovered] = useState<number | null>(null)
+
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8B5CF6]/10 rounded-full blur-[200px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#7B00FF]/8 rounded-full blur-[200px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
+
+        {/* Header */}
         <div className="text-center mb-16">
           <h2
             className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase mb-4"
             style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
           >
-            <span className="text-foreground">EL LUGAR</span>{" "}
-            <span className="text-[#8B5CF6]">ES ESTE</span>
+            <span className="text-white">EL LUGAR</span>{" "}
+            <span className="text-[#7B00FF]">ES ESTE</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pasá el mouse por cada video y conocé lo que te espera en ÁSIS.
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            Más de 14 años siendo el espacio donde la gente de Córdoba entrena de verdad.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {videos.map((video, index) => (
-            <VideoCard key={video.id} video={video} large={index === 0} />
+        {/* Cards — 3 columnas en desktop, 1 en mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-2xl cursor-pointer group"
+              style={{ aspectRatio: "3/4" }}
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {/* Foto */}
+              <Image
+                src={card.src}
+                alt={card.alt}
+                fill
+                className={`object-cover transition-transform duration-700 ${hovered === i ? "scale-110" : "scale-100"}`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+
+              {/* Overlay base siempre visible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+
+              {/* Overlay de color al hover */}
+              <div
+                className="absolute inset-0 transition-opacity duration-500"
+                style={{
+                  background: `linear-gradient(to top, ${card.accent}33 0%, transparent 60%)`,
+                  opacity: hovered === i ? 1 : 0,
+                }}
+              />
+
+              {/* Borde luminoso al hover */}
+              <div
+                className="absolute inset-0 rounded-2xl border-2 transition-all duration-500"
+                style={{
+                  borderColor: hovered === i ? card.accent : "transparent",
+                  boxShadow: hovered === i ? `inset 0 0 30px ${card.accent}22` : "none",
+                }}
+              />
+
+              {/* Contenido inferior */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                {/* Línea acento */}
+                <div
+                  className="h-0.5 rounded-full mb-4 transition-all duration-500"
+                  style={{
+                    background: card.accent,
+                    width: hovered === i ? "60px" : "30px",
+                  }}
+                />
+
+                <h3
+                  className="text-white uppercase font-bold leading-tight mb-2"
+                  style={{
+                    fontFamily: 'var(--font-bebas)',
+                    fontSize: "clamp(1.2rem, 2vw, 1.6rem)",
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  {card.title}
+                </h3>
+
+                <p
+                  className="text-sm text-white/60 transition-all duration-500"
+                  style={{
+                    opacity: hovered === i ? 1 : 0,
+                    transform: hovered === i ? "translateY(0)" : "translateY(8px)",
+                  }}
+                >
+                  {card.desc}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

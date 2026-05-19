@@ -101,19 +101,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Motivational Quote — con foto del atardecer de fondo */}
+      {/* Motivational Quote */}
       <section className="relative py-28 md:py-40 overflow-hidden">
-        {/* Foto atardecer */}
-        <img
-          src="/images/quote-bg.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center 40%" }}
-        />
-        {/* Overlay oscuro para que el texto se lea bien */}
-        <div className="absolute inset-0 bg-black/70" />
-        {/* Glow violeta sutil */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-[#8B5CF6]/5 to-background" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8B5CF6]/10 rounded-full blur-[200px]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <p
@@ -132,7 +123,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ImageGallery />
+      {/* Galería — con foto atardecer de fondo */}
+      <div className="relative">
+        <img
+          src="/images/quote-bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "right 20%" }}
+        />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="relative z-10">
+          <ImageGallery />
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="relative py-10 border-t border-[#8B5CF6]/20">

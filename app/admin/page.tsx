@@ -182,7 +182,6 @@ export default function AdminPage() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
               <div style={{ background: "#7B00FF", color: "white", fontFamily: "Bebas Neue, sans-serif", fontSize: 20, letterSpacing: 2, padding: "4px 12px", borderRadius: 6 }}>ÁSIS</div>
-              <span style={{ color: "#C8FF00", fontSize: 11, fontWeight: 700, letterSpacing: 3 }}>FITBOX</span>
             </div>
             <div style={{ color: "rgba(255,255,255,0.4)", fontSize: 13 }}>Panel de prospectos</div>
           </div>

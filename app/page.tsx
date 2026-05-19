@@ -59,18 +59,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-50"
-            poster="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          >
-            <source src="https://videos.pexels.com/video-files/4761438/4761438-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6]/20 via-transparent to-[#CCFF00]/5" />
+          <img
+            src="/images/hero-bg.jpg"
+            alt="ÁSIS Gym"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            style={{ objectPosition: "center 30%" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/40" />
         </div>
 
         <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#8B5CF6]/25 rounded-full blur-[150px] animate-pulse" />

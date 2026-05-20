@@ -90,7 +90,7 @@ function ProspectFormInner() {
           className="text-2xl md:text-3xl font-bold text-foreground uppercase"
           style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.05em' }}
         >
-          EMPEZÁ HOY MISMO
+          EMPEZÁ HOY MISMO. DESDE $22.000 POR MES!
         </h3>
       </div>
 
